@@ -15,6 +15,7 @@ running = True
 
 def main():
     global running, delta_time
+    player = Player(width/2, height/2)
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -23,7 +24,6 @@ def main():
         screen.fill("black")
         delta_time = clock.tick(60) / 1000
 
-        player = Player(width/2, height/2)
         player.draw(screen)
 
 
