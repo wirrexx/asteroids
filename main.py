@@ -6,20 +6,25 @@ height = SCREEN_HEIGHT
 width = SCREEN_WIDTH
 
 screen = pygame.display.set_mode((width, height))
+
+clock = pygame.time.Clock()
+delta_time = 0
 running = True
 
-running = True
+def main():
+    global running, delta_time
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
 
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-    screen.fill("black")
+        screen.fill("black")
 
 
-    pygame.display.flip()
+        pygame.display.flip()
 
+
+        delta_time = clock.tick(60) / 1000
 
 
 
