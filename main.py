@@ -22,8 +22,6 @@ def main():
 
 
         pygame.display.flip()
-
-
         delta_time = clock.tick(60) / 1000
 
 
