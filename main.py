@@ -1,6 +1,8 @@
 import pygame
 from constants import *
 
+from player import Player
+
 
 height = SCREEN_HEIGHT
 width = SCREEN_WIDTH
@@ -19,10 +21,15 @@ def main():
                 running = False
 
         screen.fill("black")
+        delta_time = clock.tick(60) / 1000
+
+        player = Player(width/2, height/2)
+        player.draw(screen)
+
+
 
 
         pygame.display.flip()
-        delta_time = clock.tick(60) / 1000
 
 
 
