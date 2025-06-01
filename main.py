@@ -51,7 +51,7 @@ def main():
                 if asteroid.collision(shot):
                     shot.kill()
                     new_asteroids = asteroid.split()
-                    asteroids.add(*new_asteroids    )
+                    asteroids.add(*new_asteroids)
 
 
 
